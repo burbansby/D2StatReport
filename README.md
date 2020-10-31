@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Overview
+This project is a web app that allows you to search the stats for any player in Destiny 2.<br/>
+Created react and node.js.<br/>
+Data is pulled from the [Bungie.net API](https://github.com/Bungie-net/api).<br/>
 
-## Available Scripts
+### Setup
+After downloading go into the file src.components.CharList.js<br/>
+Change the variable apiKey to your personal api key<br/>
+You key does not need any advanced permissions<br/>
+After those changes return to the root directory and run npm start<br/>
+The app should now be launched on localhost<br/>
 
-In the project directory, you can run:
+### Usage
+The top of the page has search bar where you enter the display name of the target chaacter<br/>
+Under that will be the option to select the platform of the desired character<br/>
+After filling those out click the search button and the player stats will be displayed.<br/>
 
-### `yarn start`
+*There is also an update button to refresh your character list in case there is a delay from the api request<br/>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Information
+Data is separated by the individual characters on the searched account<br/>
+Cards will be displayed with general character info as well as detailed stats<br/>
+Stats are separated by PVE, PVP, and Gambit<br/>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Future updates
+Currently planning to add the following features/fixes:<br/>
+-Auto updating the characters when they are retrieved from the api and removing the refresh button<br/>
+-More detailed stats such as favorite weapon and personal records<br/>
+-A UI that doesn't look like it was made in 1995<br/>
