@@ -1,0 +1,51 @@
+body{
+  background-color: gainsboro;
+  margin: 3em;
+}
+#banner{
+  text-align: center;
+}
+
+#search{
+  text-align: center;
+}
+
+#display{
+  text-align: center;
+}
+
+
+#Hunter{
+  border-style: solid;
+  background-color: lightblue;
+  margin: 1em;
+  padding: 1em;
+}
+#Warlock{
+  border-style: solid;
+  background-color: lightgoldenrodyellow;
+  margin: 1em;
+  padding: 1em;
+}
+#Titan{
+  border-style: solid;
+  background-color: rosybrown;
+  margin: 1em;
+  padding: 1em;
+}
+
+#basics{
+  text-align: center;
+}
+
+#data_wrapper{
+  text-align: center;
+}
+
+#data{
+  margin: 1em;
+  width: 25%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
