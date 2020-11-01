@@ -1,5 +1,5 @@
 import Character from './Character.js';
-const apiKey = 'Replace with api key';
+import {apiKey} from '../key.js';
 
 
 //Does the API search and returns a list of character objects to the home

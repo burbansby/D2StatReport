@@ -4,14 +4,14 @@ Created react and node.js.<br/>
 Data is pulled from the [Bungie.net API](https://github.com/Bungie-net/api).<br/>
 
 ### Setup
-After downloading go into the file src.components.CharList.js<br/>
+After downloading go into the file src/key.js<br/>
 Change the variable apiKey to your personal api key<br/>
 You key does not need any advanced permissions<br/>
 After those changes return to the root directory and run npm start<br/>
 The app should now be launched on localhost<br/>
 
 ### Usage
-The top of the page has search bar where you enter the display name of the target chaacter<br/>
+The top of the page has search bar where you enter the display name of the target character<br/>
 Under that will be the option to select the platform of the desired character<br/>
 After filling those out click the search button and the player stats will be displayed.<br/>
 
