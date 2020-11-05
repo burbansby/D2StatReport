@@ -23,6 +23,6 @@ Stats are separated by PVE, PVP, and Gambit<br/>
 
 ### Future updates
 Currently planning to add the following features/fixes:<br/>
--Add feedback to let the user know their search is being processed
+-Add feedback to let the user know their search is being processed<br/>
 -More detailed stats such as favorite weapon and personal records<br/>
 -A UI that doesn't look like it was made in 1995<br/>
