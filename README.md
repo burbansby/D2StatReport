@@ -13,9 +13,8 @@ The app should now be launched on localhost<br/>
 ### Usage
 The top of the page has search bar where you enter the display name of the target character<br/>
 Under that will be the option to select the platform of the desired character<br/>
-After filling those out click the search button and the player stats will be displayed.<br/>
+After filling those out click the search button and the player stats will be displayed after they are retrieved<br/>
 
-*There is also an update button to refresh your character list in case there is a delay from the api request<br/>
 
 ### Information
 Data is separated by the individual characters on the searched account<br/>
@@ -24,6 +23,6 @@ Stats are separated by PVE, PVP, and Gambit<br/>
 
 ### Future updates
 Currently planning to add the following features/fixes:<br/>
--Auto updating the characters when they are retrieved from the api and removing the refresh button<br/>
+-Add feedback to let the user know their search is being processed
 -More detailed stats such as favorite weapon and personal records<br/>
 -A UI that doesn't look like it was made in 1995<br/>
