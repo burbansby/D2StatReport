@@ -14,29 +14,22 @@ class Home extends Component {
                   }
   }
 
+  //Updating player info from the search component
   update(chars){
     this.setState({charList: chars});
   }
 
-
-
   //page rendering
   render() {
-
         return (
           <div id = "Home">
-          <div id = "banner">
-            <h1>Destiny 2 Stat Report</h1>
-          </div>
-
+            <div id = "banner">
+              <h1>Destiny 2 Stat Report</h1>
+            </div>
             <Search sendData = {this.update.bind(this)}/>
-
             <ResultHome results = {this.state.charList} />
-
-
           </div>
         );
       }
-
 }
 export default Home;

@@ -11,7 +11,8 @@ class Search extends Component{
     this.state = {
       player: undefined,
       platform: -1,
-      chars: []
+      chars: [],
+      fetching: false
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -58,6 +59,7 @@ class Search extends Component{
 
   //performs the workload of all api searches and data retrieval
   async retrieveInfo(){
+    this.setState({fetching: true})
     this.setState({chars: []});
     //get info id and type from display name
     var json = await this.getRequest(`https://www.bungie.net/platform/Destiny2/SearchDestinyPlayer/${this.state.platform}/${this.state.player}/`);
@@ -89,16 +91,26 @@ class Search extends Component{
         //Send if finished
         if(this.state.chars.length === chars.length){
           this.props.sendData(new CharList(true, this.state.chars));
+          this.setState({fetching: false});
         }
       }
     }else{
       //player does not exist
       this.props.sendData([new CharList(false, undefined)]);
+      this.setState({fetching: false});
     }
   }
 
 
   render(){
+    if(this.state.fetching){
+      return(
+        <div id = "search">
+        <p>Searching for player...</p>
+        </div>
+
+      );
+    }else{
     return(
       <div id = "search">
         <Form onSubmit={this.handleSubmit}>
@@ -149,6 +161,7 @@ class Search extends Component{
         </Form>
         </div>
     );
+  }
   }
 }
 export default Search;
