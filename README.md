@@ -23,5 +23,5 @@ Stats are separated by PVE, PVP, and Gambit<br/>
 
 ### Future updates
 Currently planning to add the following features/fixes:<br/>
--More detailed stats such as favorite weapon and personal records<br/>
+-A better search system to account for multiple accounts with the same name<br/>
 -A UI that doesn't look like it was made in 1995<br/>
