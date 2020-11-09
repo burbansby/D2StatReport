@@ -10,6 +10,7 @@ class CharacterDisplay extends Component {
               <div id = "basics">
                 <img src={char.emblem} alt="emblem" id = "emblem"/>
                 <h3>{char.class}, {char.race} {char.gender}</h3>
+                <h4>{char.playtime}</h4>
                 <h4>Light: {char.light}</h4>
               </div>
               <div id = "data_wrapper">

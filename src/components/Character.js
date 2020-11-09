@@ -1,7 +1,8 @@
 //Prototype for the character object to be saved in the character array
 export default class Character{
   constructor(charData, charStats){
-    console.log(charData);
+    //console.log(charData);  //print general character data
+    //console.log(charStats); //print character activity stats
     if(charData && charStats){
       this.playerfound = true;
       this.charID = charData.characterId;
@@ -10,6 +11,7 @@ export default class Character{
       this.race = this.getRaceByID(charData.raceType);
       this.light = charData.light;
       this.emblem = "http://www.bungie.net".concat(charData.emblemPath);
+      this.playtime = this.getTime(charData.minutesPlayedTotal);
 
       this.pvekd = charStats.allPvE.allTime.killsDeathsRatio.basic.value.toFixed(2);
       this.pveweapon = charStats.allPvE.allTime.weaponBestType.basic.displayValue;
@@ -94,11 +96,19 @@ export default class Character{
     }
   }
 
+  getTime(minutes){
+    var mins = parseInt(minutes);
+    var hours = Math.floor(mins/60);
+    mins = mins%60;
+    return `${hours} Hours and ${mins} Minutes Played`;
+  }
+
   findSentBlockers(stats){
     var small = stats.smallBlockersSent.basic.value
     var med = stats.mediumBlockersSent.basic.value
     var large = stats.largeBlockersSent.basic.value
     return ((small+med+large)/stats.activitiesEntered.basic.value).toFixed(2);
   }
+
 
 }
