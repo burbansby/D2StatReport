@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Form from 'react-bootstrap/form';
 import Character from './Character.js';
+import Account from './Account.js';
 import CharList from './CharList.js';
 import {apiKey} from '../key.js';
 
@@ -12,6 +13,7 @@ class Search extends Component{
       player: undefined,
       platform: -1,
       chars: [],
+      account: undefined,
       fetching: false
     }
     this.handleChange = this.handleChange.bind(this);
@@ -60,7 +62,7 @@ class Search extends Component{
   //performs the workload of all api searches and data retrieval
   async retrieveInfo(){
     this.setState({fetching: true})
-    this.setState({chars: []});
+      this.setState({ chars: [] });
     //get info id and type from display name
     var json = await this.getRequest(`https://www.bungie.net/platform/Destiny2/SearchDestinyPlayer/${this.state.platform}/${this.state.player}/`);
 
@@ -86,23 +88,25 @@ class Search extends Component{
         //If more requests are added put them here
 
         const newChar = new Character(charData,charStats);
-        this.setState({chars: this.state.chars.concat(newChar)});
+          this.setState({ chars: this.state.chars.concat(newChar) });
 
         //Send if finished
-        if(this.state.chars.length === chars.length){
-          this.props.sendData(new CharList(true, this.state.chars));
-          this.setState({fetching: false});
+          if (this.state.chars.length === chars.length) {
+            var acc = new Account(this.state.chars, this.state.player);
+            this.setState({ account: acc });
+            this.props.sendData([new CharList(true, this.state.chars), acc]);
+            this.setState({ fetching: false });
         }
       }
     }else{
       //player does not exist
-      this.props.sendData([new CharList(false, undefined)]);
+      this.props.sendData([[new CharList(false, undefined)], undefined]);
       this.setState({fetching: false});
     }
   }
 
 
-  render(){
+    render() {
     if(this.state.fetching){
       return(
         <div id = "search">

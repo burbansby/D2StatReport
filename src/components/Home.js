@@ -9,24 +9,26 @@ class Home extends Component {
     this.state = {player: undefined,
                   platform: -1,
                   charList: undefined,
+                  acc: undefined,
                   isFetching: false
                   }
   }
 
   //Updating player info from the search component
-  update(chars){
-    this.setState({charList: chars});
+    update(info) {
+      this.setState({ charList: info[0] });
+      this.setState({ acc: info[1] });
   }
 
   //page rendering
-  render() {
+    render() {
         return (
           <div id = "Home">
             <div id = "banner">
               <h1>Destiny 2 Stat Report</h1>
             </div>
             <Search sendData = {this.update.bind(this)}/>
-            <ResultHome results = {this.state.charList} />
+            <ResultHome results = {this.state.charList} acc={this.state.acc}/>
           </div>
         );
       }

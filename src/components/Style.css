@@ -14,24 +14,34 @@ body{
   text-align: center;
 }
 
+#header {
+    border-radius: 25px;
+    border-style: groove;
+    background-color: mediumpurple;
+    margin: 1em;
+    padding: 1em;
+}
 
-#Hunter{
-  border-style: solid;
-  background-color: lightblue;
-  margin: 1em;
-  padding: 1em;
+#Hunter {
+    border-radius: 25px;
+    border-style: groove;
+    background-color: lightblue;
+    margin: 1em;
+    padding: 1em;
 }
-#Warlock{
-  border-style: solid;
-  background-color: lightgoldenrodyellow;
-  margin: 1em;
-  padding: 1em;
+#Warlock {
+    border-radius: 25px;
+    border-style: groove;
+    background-color: lightgoldenrodyellow;
+    margin: 1em;
+    padding: 1em;
 }
-#Titan{
-  border-style: solid;
-  background-color: rosybrown;
-  margin: 1em;
-  padding: 1em;
+#Titan {
+    border-radius: 25px;
+    border-style: groove;
+    background-color: rosybrown;
+    margin: 1em;
+    padding: 1em;
 }
 
 #emblem{
@@ -42,8 +52,8 @@ body{
   text-align: center;
 }
 
-#data_wrapper{
-  text-align: center;
+#data_wrapper {
+    text-align: center;
 }
 
 #data{

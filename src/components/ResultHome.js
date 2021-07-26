@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CharacterDisplay from './CharacterDisplay';
+import AccountDisplay from './AccountDisplay';
 
 
 class ResultHome extends Component {
@@ -19,7 +20,8 @@ class ResultHome extends Component {
     render() {
       //return empty page if nothing has been searched
       const results = this.props.results;
-      if(results === undefined){
+      const acc = this.props.acc;
+      if(results === undefined || acc === undefined){
         return(null);
       }
       //if the account does not exist let user know
@@ -31,27 +33,30 @@ class ResultHome extends Component {
         );
       }
       //Account does exist, displaying results
-      else{
+      else {
         const chars = results.chars;
         if(chars.length === 1){
           //account has 1 character
           return (
-            <div id = "display">
+              <div id="display">
+                <AccountDisplay account={acc}/>
                 <CharacterDisplay char = {chars[0]}/>
             </div>
           );
         }else if (chars.length === 2){
           //account has 2 characters
           return (
-            <div id = "display">
+              <div id="display">
+                <AccountDisplay account={acc} />
                 <CharacterDisplay char = {chars[0]}/>
                 <CharacterDisplay char = {chars[1]}/>
             </div>
           );
         }else{
           //account has 3 characters
-          return (
-            <div id = "display">
+            return (
+              <div id="display">
+                <AccountDisplay account={acc} />
                 <CharacterDisplay char = {chars[0]}/>
                 <CharacterDisplay char = {chars[1]}/>
                 <CharacterDisplay char = {chars[2]}/>

@@ -11,6 +11,7 @@ export default class Character{
       this.race = this.getRaceByID(charData.raceType);
       this.light = charData.light;
       this.emblem = "http://www.bungie.net".concat(charData.emblemPath);
+      this.playtimeMins = charData.minutesPlayedTotal;
       this.playtime = this.getTime(charData.minutesPlayedTotal);
 
       this.pvekd = charStats.allPvE.allTime.killsDeathsRatio.basic.value.toFixed(2);
